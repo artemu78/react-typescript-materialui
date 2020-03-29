@@ -23,6 +23,7 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/styles": "^4.9.6",
     "@material-ui/utils": "^4.9.6",
+    "babel-loader": "^8.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }

@@ -20,6 +20,13 @@ module.exports = {
                   }
               ]
           },
+          // Process application JS with Babel.
+          // The preset includes JSX, Flow, TypeScript, and some ESnext features.
+          {
+            test: /\.(jsx)$/,
+            include: /src/,
+            loader: require.resolve('babel-loader'),
+          },
           // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
           {
               enforce: "pre",
@@ -33,8 +40,8 @@ module.exports = {
   // assume a corresponding global variable exists and use that instead.
   // This is important because it allows us to avoid bundling all of our
   // dependencies, which allows browsers to cache those libraries between builds.
-  // externals: {
-  //     "react": "React",
-  //     "react-dom": "ReactDOM"
-  // }
+  externals: {
+      "react": "React",
+      "react-dom": "ReactDOM"
+  }
 };  
